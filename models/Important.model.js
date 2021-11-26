@@ -1,12 +1,15 @@
 const mongoose = require('mongoose');
 
-const importantShema = mongoose.Schema({
-  text: {
-    type: String,
-    required: true,
+const importantSchema = mongoose.Schema(
+  {
+    text: {
+      type: String,
+      required: true,
+    },
   },
-});
+  { timestamps: true }
+);
 
-const Important = mongoose.model('Important', importantShema);
+const Important = mongoose.model('Important', importantSchema);
 
 module.exports = Important;
