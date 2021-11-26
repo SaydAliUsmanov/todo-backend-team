@@ -1,0 +1,44 @@
+{
+  "name": "authorization-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb",
+      "prettier"
+    ],
+    "rules": {
+      "no-console": "off",
+      "no-unused-vars": "warn"
+    }
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "chalk": "^4.1.2",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.2.0",
+    "mongoose": "^6.0.13",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.3.0",
+    "eslint-config-airbnb": "^19.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.4.1"
+  }
+}
