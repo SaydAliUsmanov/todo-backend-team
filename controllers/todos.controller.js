@@ -39,7 +39,7 @@ module.exports.todosController = {
   },
   getTodos: async (req, res) => {
     try {
-      const getTodos = await Todo.find();
+      const getTodos = await Todo.find().populate('important').lean();
       res.json(getTodos);
     } catch (e) {
       res.json(e);
