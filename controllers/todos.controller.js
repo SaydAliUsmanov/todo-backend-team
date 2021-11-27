@@ -4,13 +4,13 @@ module.exports.todosController = {
   create: async (req, res) => {
     try {
       const { title, text, category, important } = req.body;
-      await Todo.create({
+      const todo = await Todo.create({
         title: title,
         text: text,
         category: category,
         important: important,
       });
-      res.json('Todo Успешно добавлен');
+      res.json(todo);
     } catch (e) {
       res.json(e);
     }

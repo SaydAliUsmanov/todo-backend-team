@@ -13,6 +13,7 @@ const todoSchema = mongoose.Schema(
     category: {
       type: mongoose.SchemaTypes.ObjectId,
       ref: 'Category',
+      default: '61a0e604b6a8fecf29a10cb3'
     },
     important: {
       type: mongoose.SchemaTypes.ObjectId,
