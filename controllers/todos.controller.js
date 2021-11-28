@@ -4,12 +4,13 @@ module.exports.todosController = {
   create: async (req, res) => {
     try {
       const { title, text, category, important } = req.body;
-      const todo = await Todo.create({
+      let todo = await Todo.create({
         title: title,
         text: text,
         category: category,
         important: important,
       });
+      await Todo.populate(todo, {path:"important"})
       res.json(todo);
     } catch (e) {
       res.json(e);
